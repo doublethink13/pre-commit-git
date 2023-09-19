@@ -1,35 +1,25 @@
 [build-system]
-requires = ["hatchling", "hatch-requirements-txt"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "name"
+name = "pre-commit-git"
 version = "1.0.0"
-description = "description"
+description = "Collection of git commit hooks"
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = ["Programming Language :: Python :: 3"]
-dynamic = ["dependencies"]
 
 [project.scripts]
-name = "app.main:main"
+prevent_branch_actions = "hooks.prevent_branch_actions:main"
 
 [project.urls]
-"Homepage" = "url"
-"Bug Tracker" = "url"
-
-[tool.coverage.report]
-show_missing = true
-
-[tool.coverage.run]
-omit = ["*/tests/*", "*__init__.py*", "app/main.py"]
+"Homepage" = "https://github.com/doublethink13/pre-commit-git"
+"Bug Tracker" = "https://github.com/doublethink13/pre-commit-git/issues"
 
 [tool.flake8]
 max-line-length = 100
 exclude = ["venv"]
-
-[tool.hatch.metadata.hooks.requirements_txt]
-files = ["requirements.txt"]
 
 [tool.isort]
 profile = "black"

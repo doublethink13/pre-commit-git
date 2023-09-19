@@ -33,7 +33,7 @@ def _get_current_branch() -> str:
     return result.stdout.decode().strip()
 
 
-def _prevent():
+def prevent_branch_actions():
     parser = _parser()
 
     branches = _parse_branches(parser=parser)
@@ -45,7 +45,7 @@ def _prevent():
 
 
 def main() -> None:
-    _prevent()
+    prevent_branch_actions()
 
 
 if __name__ == "__main__":
