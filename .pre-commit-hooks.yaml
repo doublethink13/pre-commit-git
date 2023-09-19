@@ -1,6 +1,6 @@
 ---
 - description: Prevent actions on specific branches
-  entry: python ./hooks/prevent.py
+  entry: prevent_branch_actions
   id: prevent
   language: python
   language_version: python3
