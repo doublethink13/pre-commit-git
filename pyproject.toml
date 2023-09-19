@@ -7,7 +7,7 @@ name = "pre-commit-git"
 version = "1.0.0"
 description = "Collection of git commit hooks"
 readme = "README.md"
-requires-python = ">=3.11.2"
+requires-python = ">=3.10"
 classifiers = ["Programming Language :: Python :: 3"]
 
 [project.scripts]
