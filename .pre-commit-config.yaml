@@ -1,0 +1,7 @@
+---
+repos:
+  - repo: https://github.com/doublethink13/pre-commit-git
+    rev: 0.0.1
+    hooks:
+      - always_run: true
+        id: prevent
