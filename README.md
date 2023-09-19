@@ -20,7 +20,21 @@ options:
 With `pre-commit`:
 
 ```yaml
-
+---
+# default for all hooks in this repo
+default_install_hook_types:
+  - pre-commit
+  - pre-push
+repos:
+  - hooks:
+      - always_run: true
+        # by default args is ["main", "master"]
+        args:
+          - add-pre-commit-config
+        id: prevent
+    repo: https://github.com/doublethink13/pre-commit-git
+    # check https://github.com/doublethink13/pre-commit-git/tags for latest revision
+    rev: 0.0.1
 ```
 
 ## Local development

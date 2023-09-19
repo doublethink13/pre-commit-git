@@ -6,5 +6,8 @@
   language_version: python3
   name: prevent
   pass_filenames: false
+  stages:
+    - pre-commit
+    - pre-push
   types:
     - python
