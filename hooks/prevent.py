@@ -7,8 +7,8 @@ def _parser() -> argparse.ArgumentParser:
 
     parser.add_argument(
         dest="branches",
-        action="append",
-        nargs="?",
+        action="store",
+        nargs="*",
         default=["main", "master"],
         type=str,
         help="Branches to prevent the action. Defaults to ' ['main', 'master'] '",
