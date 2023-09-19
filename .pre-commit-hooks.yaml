@@ -1,7 +1,7 @@
 ---
 - description: Prevent actions on specific branches
   entry: prevent_branch_actions
-  id: prevent
+  id: prevent_branch_actions
   language: python
   language_version: python3
   name: prevent
