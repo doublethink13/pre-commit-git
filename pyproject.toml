@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "name"
+version = "1.0.0"
+description = "description"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = ["Programming Language :: Python :: 3"]
+dynamic = ["dependencies"]
+
+[project.scripts]
+name = "app.main:main"
+
+[project.urls]
+"Homepage" = "url"
+"Bug Tracker" = "url"
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.run]
+omit = ["*/tests/*", "*__init__.py*", "app/main.py"]
+
+[tool.flake8]
+max-line-length = 100
+exclude = ["venv"]
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
+[tool.isort]
+profile = "black"
+skip = ["venv"]
