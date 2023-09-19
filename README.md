@@ -21,6 +21,10 @@ With `pre-commit`:
 
 ```yaml
 ---
+# default for all hooks in this repo
+default_install_hook_types:
+  - pre-commit
+  - pre-push
 repos:
   - hooks:
       - always_run: true
