@@ -1,6 +1,10 @@
 # pre-commit-git
 
-## Prevent
+A repository with git related hooks. Developed with `pre-commit` in mind.
+
+## prevent_branch_actions
+
+A hook to prevent commit/push actions on certain branches (main and master by default).
 
 Usage:
 
