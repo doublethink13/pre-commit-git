@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - name: install requirements
+      - name: requirements
         run: make install_requirements
       - name: lint
         run: make lint
