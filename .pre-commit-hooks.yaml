@@ -1,5 +1,5 @@
 ---
-- description: Prevent actions on specific branches
+- description: Prevent actions (commit/push) on specific branches
   entry: prevent_branch_actions
   id: prevent_branch_actions
   language: python

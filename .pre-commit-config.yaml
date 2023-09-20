@@ -4,7 +4,7 @@ default_install_hook_types:
   - pre-push
 repos:
   - repo: https://github.com/doublethink13/pre-commit-git
-    rev: 6edc744aca9362bfd3255608c485916042cca0af
+    rev: 0.0.3
     hooks:
       - always_run: true
         id: prevent
