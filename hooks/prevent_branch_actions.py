@@ -45,8 +45,8 @@ def _prevent_branch_actions(args: list[str]):
         raise ValueError(f"can't perform actions on '{current_branch}'")
 
 
-def main(args: list[str]) -> None:
-    _prevent_branch_actions(args)
+def main(args: list[str] = sys.argv[1:]) -> None:
+    _prevent_branch_actions(args=args)
 
 
 if __name__ == "__main__":
