@@ -39,5 +39,5 @@ test_all:
 	@pytest tests
 
 coverage:
-	@python -m coverage run --source app -m pytest tests
+	@python -m coverage run --source hooks -m pytest tests
 	@python -m coverage report

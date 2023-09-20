@@ -1,0 +1,14 @@
+---
+name: test_coverage
+on:
+  - push
+jobs:
+  test_coverage:
+    runs-on: python:3.11.2
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: lint
+        run: make lint
+      - name: coverage
+        run: make coverage

@@ -17,6 +17,12 @@ prevent_branch_actions = "hooks.prevent_branch_actions:main"
 "Homepage" = "https://github.com/doublethink13/pre-commit-git"
 "Bug Tracker" = "https://github.com/doublethink13/pre-commit-git/issues"
 
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.run]
+omit = ["*/tests/*", "*__init__.py*", "app/main.py"]
+
 [tool.flake8]
 max-line-length = 100
 exclude = ["venv"]
