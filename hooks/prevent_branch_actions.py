@@ -1,5 +1,6 @@
 import argparse
 import subprocess
+import sys
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -17,8 +18,8 @@ def _parser() -> argparse.ArgumentParser:
     return parser
 
 
-def _parse_branches(parser: argparse.ArgumentParser) -> set[str]:
-    namespace = parser.parse_args()
+def _parse_branches(args: list[str], parser: argparse.ArgumentParser) -> set[str]:
+    namespace = parser.parse_args(args=args)
 
     return set(namespace.branches)
 
@@ -33,10 +34,10 @@ def _get_current_branch() -> str:
     return result.stdout.decode().strip()
 
 
-def _prevent_branch_actions():
+def _prevent_branch_actions(args: list[str]):
     parser = _parser()
 
-    branches = _parse_branches(parser=parser)
+    branches = _parse_branches(args=args, parser=parser)
 
     current_branch = _get_current_branch()
 
@@ -44,9 +45,9 @@ def _prevent_branch_actions():
         raise ValueError(f"can't perform actions on '{current_branch}'")
 
 
-def main() -> None:
-    _prevent_branch_actions()
+def main(args: list[str]) -> None:
+    _prevent_branch_actions(args)
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
