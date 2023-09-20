@@ -1,11 +1,15 @@
 # pre-commit-git
 
-## Prevent
+A repository with git related hooks. Developed with `pre-commit` in mind.
+
+## prevent_branch_actions
+
+A hook to prevent commit/push actions on certain branches (main and master by default).
 
 Usage:
 
 ```bash
-$ python ./hooks/prevent.py --help
+$ python ./hooks/prevent_branch_actions.py --help
 usage: prevent.py [-h] [branches]
 
 Prevent actions to specific branches
@@ -21,7 +25,7 @@ With `pre-commit`:
 
 ```yaml
 ---
-# default for all hooks in this repo
+# default for all hooks' stages in this repo
 default_install_hook_types:
   - pre-commit
   - pre-push
@@ -29,6 +33,7 @@ repos:
   - hooks:
       - always_run: true
         # by default args is ["main", "master"]
+        # see usage above
         args:
           - add-pre-commit-config
         id: prevent
